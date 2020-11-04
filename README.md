@@ -1,2 +1,0 @@
-# Captalized.github.io
-Website
