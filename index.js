@@ -25,8 +25,21 @@
 function shipType() {
   // Load the correct file for shipType
   let shipT = document.getElementById("shipType").value;
-  let filepath = "./" + shipT + ".json";
-  let json = require(filepath);
+  let jsonObj;
+  switch (shipT) {
+    case "bb":
+      jsonObj = JSON.parse(bbJSON);
+      break;
+    case "ca":
+      jsonObj = JSON.parse(caJSON);
+      break;
+    case "cv":
+      jsonObj = JSON.parse(cvJSON);
+      break;
+    case "dd":
+      jsonObj = JSON.parse(ddJSON);
+      break;
+  }
   for (let row = 0; row < 4; row++) {
     for (let col = 0; col < 6; col++) {
       let selectStr = "[data-row='" + row + "'][data-col='" + col + "']";
