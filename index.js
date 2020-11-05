@@ -57,7 +57,7 @@ function retrieve() {
   // url: http://127.0.0.1:5500/?uid=21
   const urlParams = new URLSearchParams(window.location.search);
   if (!urlParams.has("uid")) {
-    window.close;
+    window.stop;
   }
   uid = urlParams.get("uid");
   const request = new Request(`http://localhost:8000/cap-builds/${uid}`);
