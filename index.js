@@ -25,7 +25,7 @@
 function shipType() {
   // Load the correct file for shipType
   let shipT = document.getElementById("shipType").value;
-  let filepath = "./static/txt/" + shipT + ".json";
+  let filepath = "./" + shipT + ".json";
   let json = require(filepath);
   for (let row = 0; row < 4; row++) {
     for (let col = 0; col < 6; col++) {
