@@ -26,24 +26,25 @@ function shipType() {
   // Load the correct file for shipType
   let shipT = document.getElementById("shipType").value;
   let jsonObj;
+  console.log(bbJSON)
   switch (shipT) {
     case "bb":
-      jsonObj = JSON.parse(bbJSON);
+      jsonObj = bbJSON;
       break;
     case "ca":
-      jsonObj = JSON.parse(caJSON);
+      jsonObj = caJSON;
       break;
     case "cv":
-      jsonObj = JSON.parse(cvJSON);
+      jsonObj = cvJSON;
       break;
     case "dd":
-      jsonObj = JSON.parse(ddJSON);
+      jsonObj = ddJSON;
       break;
   }
   for (let row = 0; row < 4; row++) {
     for (let col = 0; col < 6; col++) {
       let selectStr = "[data-row='" + row + "'][data-col='" + col + "']";
-      document.querySelector(selectStr).innerHTML = json[row][col].name;
+      document.querySelector(selectStr).innerHTML = jsonObj[row][col].name;
     }
   }
 }
