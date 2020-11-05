@@ -56,6 +56,9 @@ function fetchHandle(data) {
 function retrieve() {
   // url: http://127.0.0.1:5500/?uid=21
   const urlParams = new URLSearchParams(window.location.search);
+  if (!urlParams.has("uid")) {
+    window.close;
+  }
   uid = urlParams.get("uid");
   const request = new Request(`http://localhost:8000/cap-builds/${uid}`);
   fetch(request)
@@ -63,6 +66,4 @@ function retrieve() {
     .then((data) => fetchHandle(data));
 }
 
-
 window.onload = retrieve();
-
