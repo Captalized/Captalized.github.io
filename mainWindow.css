@@ -1,0 +1,88 @@
+@import "./switch.css";
+@import "./select.css";
+
+body {
+  background-image: url('./wows.jpg');
+}
+
+#header {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.UItext {
+  color: white;
+}
+
+#type-text {
+  display: inline-block;
+}
+
+#detail-lable {
+  display: inline-block;
+}
+
+#sp {
+  text-align: left;
+  font-size: 30px;
+}
+
+#toggleswitch {
+  float: right;
+}
+
+#button-container {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  display: grid;
+  gap: 10px 20px;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+  align-content: center;
+}
+
+button {
+  font-family: sans-serif;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.skillBTN {
+  transition-duration: 0.2s;
+  background-color: dodgerblue;
+  color: white;
+  border: 2px solid dodgerblue;
+  font-size: 20px;
+}
+
+.skillBTN:enabled:hover {
+  background-color:white;
+  color:black;
+}
+
+.skillBTN:disabled {
+  background-color:white;
+  color:black;
+  cursor: not-allowed;
+}
+
+#resetBTN {
+  transition-duration: 0.2s;
+  background-color:  red;
+  color:black;
+  border: 2px solid red;
+  display: inline-block;
+  font-size: 30px;
+}
+
+#resetBTN:enabled:hover {
+  background-color:white;
+  color:black;
+}
+
+
+
