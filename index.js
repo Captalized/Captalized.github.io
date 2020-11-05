@@ -1,8 +1,10 @@
-function shipType() {
+let uid;
+let shipType;
+
+function SThandle() {
   // Load the correct file for shipType
-  let shipT = document.getElementById("shipType").value;
   let jsonObj;
-  switch (shipT) {
+  switch (shipType) {
     case "bb":
       jsonObj = bbJSON;
       document.getElementById("shipType").innerHTML = "战列舰";
@@ -31,10 +33,11 @@ function shipType() {
 function fetchHandle(data) {
   const target = JSON.parse(data);
   const skills = JSON.parse(target.buildData);
+  shipType = target.ShipType;
+  document.getElementById("shipType").value = shipType;
   document.getElementById("name").innerHTML = target.BuildName;
-  document.getElementById("shipType").value = target.ShipType;
   document.getElementById("data").innerHTML = target.buildData;
-  shipType();
+  SThandle();
   for (let row = 0; row < 4; row++) {
     for (let col = 0; col < 6; col++) {
       let selectStr = `[data-row='${row}'][data-col='${col}']`;
@@ -50,12 +53,16 @@ function fetchHandle(data) {
   }
 }
 
-document.getElementById("submit").addEventListener("click", (event) => {
-  const id = document.getElementById("index").value;
-  const request = new Request(`http://localhost:8000/cap-builds/${id}`);
+function retrieve() {
+  // url: http://127.0.0.1:5500/?uid=21
+  const urlParams = new URLSearchParams(window.location.search);
+  uid = urlParams.get("uid");
+  const request = new Request(`http://localhost:8000/cap-builds/${uid}`);
   fetch(request)
     .then((response) => response.text())
     .then((data) => fetchHandle(data));
-});
+}
 
-window.onload = shipType();
+
+window.onload = retrieve();
+
