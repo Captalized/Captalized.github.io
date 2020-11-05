@@ -13,6 +13,11 @@ body {
   color: white;
 }
 
+#shipType {
+  font-size: large;
+  font-weight: bold;
+}
+
 #type-text {
   display: inline-block;
 }
