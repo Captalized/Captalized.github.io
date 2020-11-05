@@ -1,4 +1,3 @@
-@import "./switch.css";
 @import "./select.css";
 
 body {
@@ -16,19 +15,6 @@ body {
 
 #type-text {
   display: inline-block;
-}
-
-#detail-lable {
-  display: inline-block;
-}
-
-#sp {
-  text-align: left;
-  font-size: 30px;
-}
-
-#toggleswitch {
-  float: right;
 }
 
 #button-container {
@@ -59,30 +45,9 @@ button {
   font-size: 20px;
 }
 
-.skillBTN:enabled:hover {
-  background-color:white;
-  color:black;
-}
 
-.skillBTN:disabled {
-  background-color:white;
-  color:black;
-  cursor: not-allowed;
-}
 
-#resetBTN {
-  transition-duration: 0.2s;
-  background-color:  red;
-  color:black;
-  border: 2px solid red;
-  display: inline-block;
-  font-size: 30px;
-}
 
-#resetBTN:enabled:hover {
-  background-color:white;
-  color:black;
-}
 
 
 

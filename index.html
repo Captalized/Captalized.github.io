@@ -3,18 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>舰长加点模拟器</title>
-    <link rel="stylesheet" href="./mainWindow.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div id="header">
       <h3 class="UItext" id="type-text">舰种：</h3>
-      <div id="toggleswitch">
-        <h3 id="detail-lable">详细</h3>
-        <label class="switch">
-          <input id="detailCKB" type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </div>
       <select class="select-css" name="舰种" id="shipType">
         <option value="dd">驱逐舰</option>
         <option value="ca">巡洋舰</option>
@@ -246,16 +239,6 @@
         name="button"
       >
         技能
-      </button>
-    </div>
-
-    <div>
-      <h3 class="UItext" id="sp">技能点：21/21</h3>
-    </div>
-
-    <div>
-      <button id="resetBTN" type="button" id="reset" name="reset button">
-        重置
       </button>
     </div>
   </body>
