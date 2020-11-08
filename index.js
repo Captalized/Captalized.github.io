@@ -35,8 +35,7 @@ function fetchHandle(data) {
   const skills = JSON.parse(target.buildData);
   shipType = target.ShipType;
   document.getElementById("shipType").value = shipType;
-  document.getElementById("name").innerHTML = target.BuildName;
-  document.getElementById("data").innerHTML = target.buildData;
+  document.getElementById("remark").innerHTML = target.BuildName;
   SThandle();
   for (let row = 0; row < 4; row++) {
     for (let col = 0; col < 6; col++) {
